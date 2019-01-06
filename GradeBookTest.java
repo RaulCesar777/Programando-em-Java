@@ -9,7 +9,8 @@
 public class GradeBookTest {
 
    
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
     	Scanner entrada = new Scanner(System.in);
         GradeBook mygrade = new GradeBook();
         System.out.println("entre com o nome do curso");

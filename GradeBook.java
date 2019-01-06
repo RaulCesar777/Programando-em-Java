@@ -8,7 +8,8 @@
 
 
 
-public class GradeBook {
+public class GradeBook
+{
     public void displayMessage(String nomedoCurso){
         System.out.printf("bem vindo  \n %s! \n", nomedoCurso);
 

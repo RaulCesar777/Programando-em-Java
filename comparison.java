@@ -8,7 +8,8 @@
  */
 import java.util.Scanner;
 
-public class comparison {
+public class comparison 
+{
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int number1;
