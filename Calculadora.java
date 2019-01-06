@@ -3,7 +3,6 @@
  * @author Raul Cesar Mulerschat
  * @email raulzito737@gmail.com
  * @create date 2019-01-03 03:06:54
- * @modify date 2019-01-03 03:06:54
  * @desc [description]
  */
 import java.util.Scanner;
