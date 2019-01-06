@@ -19,14 +19,14 @@ public class Calculadora {
         Scanner numScanner = new Scanner(System.in);
         Scanner op = new Scanner(System.in);
 
-        do {
+       
 
             System.out.println("\t\t\t\tCalculadora extruturada em java\n");
             System.out.println("\t\t\t\t* para multiplicacao\n");
             System.out.println("\t\t\t\t/ para divisão\n");
             System.out.println("\t\t\t\t+ para somar\n");
             System.out.println("\t\t\t\t- para subtracao\n");
-            System.out.println("\t\t\t\t selecione 0 para sair \n");
+            System.out.println("\t\t\t\t selecione  \n");
             opt = op.next();
 
             System.out.println("NUMERO1");
@@ -48,14 +48,7 @@ public class Calculadora {
                 System.out.printf("o numero eh %d\n\n", z);
             }
 
-            System.out.println("\t\t\t\t selecione 0 para sair \n");
-            opt = op.next();
-            if (opt.equals("0")) {
-                continuar = false;
-                System.out.println("Programa finalizado.");
-            }
-
-        } while (continuar);
+                   
 
     }
 
