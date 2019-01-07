@@ -27,7 +27,7 @@ public class Calculadora {
             System.out.println("\t\t\t\t+ para somar\n");
             System.out.println("\t\t\t\t- para subtracao\n");
             System.out.println("\t\t\t\t selecione  \n");
-            opt = op.next();
+           opt = op.next();
 
             System.out.println("NUMERO1");
             x = numScanner.nextInt();

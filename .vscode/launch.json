@@ -6,6 +6,19 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Debug (Launch) with Arguments Prompt",
+            "request": "launch",
+            "mainClass": "",
+            "args": "${command:SpecifyProgramArgs}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - External Terminal",
             "request": "launch",
             "console": "externalTerminal",
@@ -17,5 +30,13 @@
             "request": "launch",
             "mainClass": "${file}"
         }
+        {
+            "type": "java",
+            "name": "Debug (Launch) - meu tipo",
+            "request": "launch",
+            "console": "internalConsole",
+            "console": "externalTerminal",
+            "mainClass": ""
+        },
     ]
 }
