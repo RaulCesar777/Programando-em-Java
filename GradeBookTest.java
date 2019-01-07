@@ -11,13 +11,18 @@ public class GradeBookTest {
    
     public static void main(String[] args) 
     {
-    	Scanner entrada = new Scanner(System.in);
-        GradeBook mygrade = new GradeBook();
+        Scanner entrada = new Scanner(System.in);
+
+       
+        GradeBook myGradeBook = new GradeBook();
+
+        System.out.printf("entre com o nome do curso %s", myGradeBook.getCourseName());
         System.out.println("entre com o nome do curso");
-        String nomedoCurso = entrada.nextLine();
+        String theName = entrada.nextLine();
+        myGradeBook.setCourseName(theName);
         System.out.println();	
 
-        mygrade.displayMessage(nomedoCurso);
+        myGradeBook.displayMessage();
     }
     
 }
