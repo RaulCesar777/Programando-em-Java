@@ -12,17 +12,14 @@ public class GradeBookTest {
     public static void main(String[] args) 
     {
         Scanner entrada = new Scanner(System.in);
+        // criando objetos gradeBook       
+        GradeBook gradeBook1 = new GradeBook("\n introducao a programacao java");
+        GradeBook gradeBook2 = new GradeBook("\n introducao a estrutura de dados em java");
 
-       
-        GradeBook myGradeBook = new GradeBook();
-
-        System.out.printf(" inicial %s \n\n", myGradeBook.getCourseName());
-        System.out.println("entre com o nome do curso");
-        String theName = entrada.nextLine();
-        myGradeBook.setCourseName(theName);
-        System.out.println();	
-
-        myGradeBook.displayMessage();
+        // exibindo objetos
+        System.out.printf(" o nome do curso da grade 1 eh %s \n\n", gradeBook1.getCourseName());
+        System.out.printf(" o nome do curso da grade 2 eh %s \n\n", gradeBook2.getCourseName());
+        
     }
     
 }

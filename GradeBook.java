@@ -13,6 +13,11 @@
 public class GradeBook
 {
     private String courseName;
+    // o construtor inicializa courseName com o arguemento String
+    public GradeBook(String name){
+
+        courseName = name;
+    }
 
     public void setCourseName(String name){ /* metodo para configurar o nome do curso*/
 
