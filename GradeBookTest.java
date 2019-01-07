@@ -16,7 +16,7 @@ public class GradeBookTest {
        
         GradeBook myGradeBook = new GradeBook();
 
-        System.out.printf("entre com o nome do curso %s", myGradeBook.getCourseName());
+        System.out.printf("%s", myGradeBook.getCourseName());
         System.out.println("entre com o nome do curso");
         String theName = entrada.nextLine();
         myGradeBook.setCourseName(theName);
