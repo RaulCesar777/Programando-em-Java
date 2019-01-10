@@ -5,7 +5,7 @@
  * @modify date 2019-01-07 23:47:10
  * @desc [description]
  */
-import java.lang.Math;
+
 import java.util.Scanner;
 
 public class AccountTest
