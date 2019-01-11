@@ -34,8 +34,8 @@
             "type": "java",
             "name": "Debug (Launch) - meu tipo",
             "request": "launch",
-            "console": "internalConsole",
-            "console": "externalTerminal",
+            "console": "integratedTerminal",
+            
             "mainClass": ""
         },
     ]
