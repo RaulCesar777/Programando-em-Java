@@ -43,21 +43,37 @@ public class GradeBook
         int total; //soma todas as notas
         int gradeCounter;//numero de notas a serem inseridas
         int grade;//nota
-        int avarege;//media
+        double avarege;//media
 
         total=0;
-        gradeCounter=1;
-        while(gradeCounter<=10){
-            System.out.println("entre com a nota");
-            grade=input.nextInt();
+        gradeCounter=0;
+        System.out.println("entre com a nota ou -1 p/sair");
+        grade=input.nextInt();
+
+        while(grade != -1){
+
             total= total+grade;
             gradeCounter=gradeCounter+1;
 
+            System.out.println("entre com a nota ou -1 p/sair");
+            grade=input.nextInt();          
+            
+
             
         }
-        avarege= total/10;
-        System.out.printf("\n total das 10 notas %d \n", total);
-        System.out.printf("\nMedia da classe = %d\n", avarege);
+        if(gradeCounter !=0){
+
+            avarege=(double) total/gradeCounter;
+            System.out.printf("\n total das %d notas %d \n",gradeCounter, total);
+            System.out.printf("\nMedia da classe = %.2f\n", avarege);
+
+
+        }else System.out.println("nao ha notas");
+
+
+
+        
+        
 
 
     }
