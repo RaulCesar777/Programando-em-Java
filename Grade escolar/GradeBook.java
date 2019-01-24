@@ -9,7 +9,7 @@
 
 
 
-
+import java.util.Scanner;
 public class GradeBook
 {
     private String courseName;
@@ -36,5 +36,29 @@ public class GradeBook
         System.out.printf(" Bem Vindo ao curso \n %s ! \n", getCourseName());
         
     }
+    public void determineClassAvarege(){
 
+        Scanner input =new Scanner (System.in);
+
+        int total; //soma todas as notas
+        int gradeCounter;//numero de notas a serem inseridas
+        int grade;//nota
+        int avarege;//media
+
+        total=0;
+        gradeCounter=1;
+        while(gradeCounter<=10){
+            System.out.println("entre com a nota");
+            grade=input.nextInt();
+            total= total+grade;
+            gradeCounter=gradeCounter+1;
+
+            
+        }
+        avarege= total/10;
+        System.out.printf("\n total das 10 notas %d \n", total);
+        System.out.printf("\nMedia da classe = %d\n", avarege);
+
+
+    }
 }
