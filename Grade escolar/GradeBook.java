@@ -24,7 +24,7 @@ public class GradeBook
 
         courseName = name;  /* armazena o nome do curso */     
 
-    } /*fim do metodo  set nomedoCurso */
+    }  /*fim do metodo  set nomedoCurso */
 
     // metodo para recuperar o nome
     public String getCourseName()

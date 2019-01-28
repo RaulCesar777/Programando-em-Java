@@ -14,6 +14,7 @@ public class Analysis{
             System.out.println("entre com o resultado (1 aprovado, 2 reprovado):");
             resultado = entrada.nextInt();
             if(resultado==1)
+            
                 aprovado=aprovado+1;
             else
                 reprovado=reprovado+1;
