@@ -1,80 +1,116 @@
-/*
-* @Author: RaulCesar777
-* @Date:   2019-01-05 19:49:11
-* @Last Modified by:   Win10
-* @Last Modified time: 2019-01-05 20:54:35
-*clsse gradeBook possui uma variavel de instancia 
-* nomedocurso  e
- metodos para configurar e obter seu valor */
-/* usando set e get*/
 
+// @Author: RaulCesar777
+//@Date:   2019-01-05 19:49:11
+//@Last Modified by:   Win10
+//Last Modified time: 2019-01-05 20:54:35
 
 
 import java.util.Scanner;
 public class GradeBook
 {
     private String courseName;
-    // o construtor inicializa courseName com o arguemento String
-    public GradeBook(String name){
+    private int total;
+    private int contador;
+    private int contA;
+    private int contB;
+    private int contC;
+    private int contD;
+    private int contF;
+    
+
+////////////////////////////////////////////////////////////////////////////////////////
+    public GradeBook(String name)
+    {
 
         courseName = name;
     }
-
-    public void setCourseName(String name){ /* metodo para configurar o nome do curso*/
+    /////////////////////////////////////////////////////////////////////////////////
+    public void setCourseName(String name){ 
 
         courseName = name;  /* armazena o nome do curso */     
 
-    }  /*fim do metodo  set nomedoCurso */
+    }  
 
-    // metodo para recuperar o nome
+    /////////////////////////////////////////////////////////////////////////////////////
     public String getCourseName()
     {
         return courseName;
-    }//fim do metodo getNomeDoCurso
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////////////
 
     public void displayMessage()
     {
-        System.out.printf(" Bem Vindo ao curso \n %s ! \n", getCourseName());
+        System.out.printf(" Bem Vindo ao curso  %s  \n", getCourseName());
         
     }
-    public void determineClassAvarege(){
+    ///////////////////////////////////////////////////////////////////////////////////
+    public void inputGrades()
+    {
+        Scanner entrada = new Scanner(System.in);
+        int nota;
+            System.out.printf("entre com as notas de 0 a 100 \n");
+            System.out.printf("control z para sair \n");
 
-        Scanner input =new Scanner (System.in);
+                while(entrada.hasNext()){
+                    nota = entrada.nextInt();
+                    total+=nota;
+                    ++contador;
 
-        int total; //soma todas as notas
-        int gradeCounter;//numero de notas a serem inseridas
-        int grade;//nota
-        double avarege;//media
+                    incrementacontadordenotas(nota);
+                }
 
-        total=0;
-        gradeCounter=0;
-        System.out.println("entre com a nota ou -1 p/sair");
-        grade=input.nextInt();
+    }
 
-        while(grade != -1){
+    ////////////////////////////////////////////////////////////////////////////////////////
 
-            total= total+grade;
-            gradeCounter=gradeCounter+1;
+    public void incrementacontadordenotas(int nota)
+    {
+        switch(nota/10)
+        {
+            case 9:
+            case 10:
+            ++contA;
+            break;
 
-            System.out.println("entre com a nota ou -1 p/sair");
-            grade=input.nextInt();          
-            
+            case 8:
+            ++contB;
+            break;
 
-            
+            case 7:
+            ++contC;
+            break;
+
+            case 6:
+            ++contD;
+            break;
+
+            default:
+            ++contF;
+            break;
         }
-        if(gradeCounter !=0){
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-            avarege=(double) total/gradeCounter;
-            System.out.printf("\n total das %d notas %d \n",gradeCounter, total);
-            System.out.printf("\nMedia da classe = %.2f\n", avarege);
+    public void mostrarelatorio()
+    {
+        System.out.println("\n relatorio de notas");
 
+        if(contador!=0)
+        {
+            double media =(double)total/ contador;
+            System.out.printf("total de %d notas inseridas %d\n", contador, total);
+            System.out.printf(" media da classe eh %.2f%n", media);
+            System.out.printf(" %n %s %n %s %d %n %s %d %n %s %d %n %s %d %n %s %d %n",
+                                "numero de estudante em relacao as notas:",
+                                "A:",contA,
+                                "B:",contB,
+                                "C:",contC,
+                                "D:",contD,
+                                "F:",contF);
+        }
+        else System.out.println(" nao ha registro de notas");
 
-        }else System.out.println("nao ha notas");
-
-
-
-        
-        
 
 
     }
