@@ -11,15 +11,5 @@ public class DrawPanelTest{
         aplicacao.setSize(400,400);
         aplicacao.setVisible(true);
 
-
-
-
     }
-
-
-
-
-
-
-
 }
