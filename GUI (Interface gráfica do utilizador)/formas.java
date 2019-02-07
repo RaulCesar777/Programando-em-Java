@@ -2,6 +2,7 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import java.awt.Color;
 
 public class formas extends JPanel
 {
@@ -42,7 +43,13 @@ public class formas extends JPanel
                   break;
         
            case 3:
-                g.drawOval(130-12*i,120-12*i,10+25*i,10+25*i);
+                if (i%2==0) {
+                    g.setColor(Color.red);
+                    g.drawOval(130-12*i,120-12*i,10+25*i,10+25*i);
+                }else{
+                    g.setColor(Color.black);
+                    g.drawOval(130-12*i,120-12*i,10+25*i,10+25*i);
+                }
 
                 break;
 
