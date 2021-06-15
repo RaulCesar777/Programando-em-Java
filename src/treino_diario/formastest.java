@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 
 public class formastest 
 {
+	
    public static void main(String[] args)
    {
         String entrada = JOptionPane.showInputDialog("1 para retangulo, 2 para oval");
